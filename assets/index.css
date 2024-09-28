@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 10px 0px;
+  background: linear-gradient(to right, #f0f4f7, #e1e8ed);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  color: #242444;
+  font-size: 2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #468ba0, #339dc7, #2b7f8b);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+table {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background: linear-gradient(to left, #468ba0, #339dc7, #2b7f8b);
+  color: white;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  border-radius: 0;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 20%;
+}
+th:nth-child(2),
+td:nth-child(2) {
+  width: 60%;
+}
+th:nth-child(3),
+td:nth-child(3) {
+  width: 20%;
+}
+
+tbody tr {
+  background-color: #ffffff;
+}
+
+tbody tr:hover {
+  background-color: #eaeaea;
+}
+
+.detail-row td {
+  background-color: #f9f9f9;
+}
+
+.spinner-space {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.spinner {
+  animation: rotate 2s linear infinite;
+  width: 30px;
+  height: 30px;
+
+  & .path {
+    stroke: #666;
+    stroke-linecap: round;
+    animation: dash 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+tbody tr {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+  th,
+  td {
+    padding: 10px;
+  }
+}
