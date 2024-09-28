@@ -7,7 +7,7 @@
 1. Склонируйте репозиторий:
 
    ```bash
-   git clone https://gitlab.com/gholeum/amo-test.git
+   git clone https://github.com/gholeum/amo-test.git
    ```
 
 2. Откройте проект в Visual Studio Code.
